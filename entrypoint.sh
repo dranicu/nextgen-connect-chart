@@ -2,7 +2,7 @@
 set -e
 
 # Custom forced env variables
-export DATABASE=postgres
+export DATABASE=mysql
 export DATABASE_URL=$JDBC_DATABASE_URL
 
 custom_extension_count=`ls -1 /opt/connect/custom-extensions/*.zip 2>/dev/null | wc -l`
