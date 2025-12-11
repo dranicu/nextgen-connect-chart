@@ -4,10 +4,10 @@
 replicaCount: 1
 mysql:
   auth:
-    rootPassword: ""
+    rootPassword: "ChangeMe123!"
     database: "mirthdb"
-    username: "mirth"
-    password: ""
+    username: "root"
+    password: "MirthDB2024!"
 
 image:
   repository: ghcr.io/hiddehs/nextgen-connect-chart
