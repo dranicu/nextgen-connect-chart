@@ -52,15 +52,17 @@ spec:
               path: /
               port: mirth
           env:
+            - name: DATABASE
+              value: "mysql"
             - name: DATABASE_USERNAME
-              value: "mirth"
+              value: "root"
             - name: JDBC_DATABASE_URL
-              value: "jdbc:mysql://{{ .Chart.Name }}-mysql:3306/mirthdb"
+              value: "jdbc:mysql://{{ .Chart.Name }}-mysql:3306/mirthdb?useSSL=false"
             - name: DATABASE_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: {{ .Chart.Name }}-mysql
-                  key: mysql-password
+                  key: mysql-root-password
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
