@@ -25,5 +25,5 @@ appVersion: "v3.11"
 
 dependencies:
   - name: mysql
-    version: '^9'
+    version: 'latest'
     repository: "https://charts.bitnami.com/bitnami"
